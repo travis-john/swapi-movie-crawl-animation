@@ -2,7 +2,8 @@ let $body = $('body'),
     $starCount = 250,
     $bodyHeight = $body.height(),
     $bodyWidth = $body.width(),
-    $query = 'https://swapi.co/api/films';
+    $query = 'https://swapi.co/api/films',
+    $audio = $('audio');
 
 for ( let i = 0; i < $starCount; i++){
 
@@ -65,6 +66,12 @@ $.ajax({
     // generateStars();
 
     $(this).find('.crawl').toggleClass('d-none');
-    $('body').toggleClass('no-scroll');
+    $($body).toggleClass('no-scroll');
+    if ($body.hasClass('no-scroll')) {
+      $audio.get(0).play();
+    } else {
+      $audio.get(0).pause();
+      $audio.get(0).currentTime = 0;
+    }
   });
 });
