@@ -52,12 +52,12 @@ $.ajax({
     $('.movie-title-row').append(`
         <div class='col-12 col-sm-6 col-md-4'>
           <div class ='film'>
-            <h2 class='film-title'>${films[i].title.toLowerCase()}</h2>
+            <h2 class='film-title'>${films[i].title}</h2>
             <div class='crawl d-none'>
               <p class='crawl-text crawl-text--intro'>A long time ago, in a galaxy far, far away...</p>
               <div class='logo'>${$logo}</div>
               <h2 class='crawl-title'>${films[i].title}</h2>
-              <p class='crawl-text'>${films[i].opening_crawl.toLowerCase()}</p>
+              <p class='crawl-text'>${films[i].opening_crawl}</p>
             </div>
           </div>
         </div>

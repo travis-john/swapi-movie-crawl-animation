@@ -4,17 +4,9 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: swtitle;
-  src: url(https://beumsk.github.io/Tutorials/font/SWCrawlTitle.ttf?raw=true) format('truetype');
-}
-
-@font-face {
-  font-family: swbody;
-  src: url(https://beumsk.github.io/Tutorials/font/SWCrawlBody.ttf?raw=true) format('truetype');
-}
 
 body {
+  font-family: 'News Cycle', sans-serif;
   min-height: 100vh;
   text-align: center;
   font-family: Arial;
@@ -63,7 +55,7 @@ h1 {
 }
 
 .film-title {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .crawl {
