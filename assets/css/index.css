@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: swtitle;
+  src: url(https://beumsk.github.io/Tutorials/font/SWCrawlTitle.ttf?raw=true) format('truetype');
+}
+
+@font-face {
+  font-family: swbody;
+  src: url(https://beumsk.github.io/Tutorials/font/SWCrawlBody.ttf?raw=true) format('truetype');
+}
+
+body {
+  min-height: 100vh;
+  text-align: center;
+  font-family: Arial;
+  background: black;
+}
+
+.star {
+	width: .25rem;
+	height: .25rem;
+	border-radius: 50%;
+  opacity: .75;
+	background-color: white;
+  position: absolute;
+  z-index: -1;
+}
+
+header {
+  padding: 1rem;
+  border-bottom: 2px solid #e5b13a;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: normal;
+  padding: 1.25rem;
+  letter-spacing: 0.1em;
+  color: #e5b13a;
+}
