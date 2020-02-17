@@ -89,6 +89,10 @@ h1 {
   text-align: justify;
 }
 
+.crawl-text--intro {
+  color: #4bd5ee;
+}
+
 .crawl-title {
   font-family: swtitle, Arial;
 }

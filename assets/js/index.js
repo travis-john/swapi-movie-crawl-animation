@@ -3,7 +3,8 @@ let $body = $('body'),
     $bodyHeight = $body.height(),
     $bodyWidth = $body.width(),
     $query = 'https://swapi.co/api/films',
-    $audio = $('audio');
+    $audio = $('audio'),
+    $logo = $.get('../assets/images/logo.svg');
 
 for ( let i = 0; i < $starCount; i++){
 
@@ -53,7 +54,8 @@ $.ajax({
           <div class ='film'>
             <h2 class='film-title'>${films[i].title.toLowerCase()}</h2>
             <div class='crawl d-none'>
-              <div class='logo'>S</div>
+              <p class='crawl-text crawl-text--intro'>A long time ago, in a galaxy far, far away...</p>
+              <div class='logo'>${$logo}</div>
               <h2 class='crawl-title'>${films[i].title}</h2>
               <p class='crawl-text'>${films[i].opening_crawl.toLowerCase()}</p>
             </div>
