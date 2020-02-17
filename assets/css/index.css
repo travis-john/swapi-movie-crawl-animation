@@ -59,9 +59,54 @@ h1 {
 
 .film:hover,
 .film:focus {
-  box-shadow: 0 0 0px 2px rgba(229,177,58,1) inset;
+  box-shadow: 0 0 0 .125rem #e5b13a inset;
 }
 
 .film-title {
   font-size: 3rem;
+}
+
+.crawl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+  background: rgba(0,0,0,1);
+  z-index: 1000;
+  padding: 10px;
+  color: #e5b13a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.crawl-title,
+.crawl-text {
+  max-width: 300px;
+  text-align: justify;
+}
+
+.crawl-title {
+  font-family: swtitle, Arial;
+}
+
+.crawl-star {
+  width: .25rem;
+	height: .25rem;
+	border-radius: 50%;
+  opacity: .75;
+	background-color: white;
+  position: absolute;
+  z-index: 1;
+}
+
+.crawl-text {
+  font-family: swbody, Arial;
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }

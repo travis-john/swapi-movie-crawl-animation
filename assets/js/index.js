@@ -1,14 +1,14 @@
-let $parent = $('body'),
+let $body = $('body'),
     $starCount = 250,
-    $parentHeight = $parent.height(),
-    $parentWidth = $parent.width(),
+    $bodyHeight = $body.height(),
+    $bodyWidth = $body.width(),
     $query = 'https://swapi.co/api/films';
 
 for ( let i = 0; i < $starCount; i++){
 
-  let $randPosX = Math.floor((Math.random()*$parentWidth)),
-      $randPosY = Math.floor((Math.random()*$parentHeight));
-      $parent.append('<div class="star star--position-'+i+'"></div>');
+  let $randPosX = Math.floor((Math.random()*$bodyWidth)),
+      $randPosY = Math.floor((Math.random()*$bodyHeight));
+      $body.append('<div class="star star--position-'+i+'"></div>');
 
    $('.star--position-'+i).each(function(){
      $(this).css({
@@ -16,6 +16,28 @@ for ( let i = 0; i < $starCount; i++){
      top: $randPosY
     });
   });
+}
+
+function generateStars() {
+
+  let $parent = $('.crawl'),
+      $parentHeight = $parent.height(),
+      $parentWidth = $parent.width();
+
+  for ( let i = 0; i < $starCount; i++){
+
+    let $randPosX = Math.floor((Math.random()*$parentWidth)),
+        $randPosY = Math.floor((Math.random()*$parentHeight));
+        $parent.append('<div class="crawl-star star--position-'+i+'"></div>');
+
+     $('.star--position-'+i).each(function(){
+       $(this).css({
+       left: $randPosX,
+       top: $randPosY
+      });
+    });
+  }
+
 }
 
 $.ajax({
@@ -40,8 +62,9 @@ $.ajax({
   }
   $('.film').on('click', function() {
 
-    console.log('clicked');
+    // generateStars();
 
     $(this).find('.crawl').toggleClass('d-none');
+    $('body').toggleClass('no-scroll');
   });
 });
