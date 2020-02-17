@@ -23,14 +23,15 @@ $.ajax({
   method: 'GET'
 }).then(function(response) {
   console.log(response);
-  for (let i = 0; i < response.results.length; i++) {
+  films = response.results;
+  for (let i = 0; i < films.length; i++) {
     $('.movie-title-row').append(`
         <div class='col-12 col-sm-6 col-md-4'>
           <div class ='film'>
-            <h2 class='film-title'>${response.results[i].title.toLowerCase()}</h2>
+            <h2 class='film-title'>${films[i].title.toLowerCase()}</h2>
             <div class='crawl d-none'>
-              <h2 class='crawl-title'>${response.results[i].title}</h2>
-              <p class='crawl-text'>${response.results[i].opening_crawl}</p>
+              <h2 class='crawl-title'>${films[i].title}</h2>
+              <p class='crawl-text'>${films[i].opening_crawl}</p>
             </div>
           </div>
         </div>
