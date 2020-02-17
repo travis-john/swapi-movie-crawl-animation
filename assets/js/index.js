@@ -32,17 +32,16 @@ $.ajax({
             <div class='crawl d-none'>
               <div class='logo'>S</div>
               <h2 class='crawl-title'>${films[i].title}</h2>
-              <p class='crawl-text'>${films[i].opening_crawl}</p>
+              <p class='crawl-text'>${films[i].opening_crawl.toLowerCase()}</p>
             </div>
           </div>
         </div>
       `);
   }
-});
+  $('.film').on('click', function() {
 
-$('.film').on('click', function() {
+    console.log('clicked');
 
-  console.log('clicked');
-
-  $(this).find('.crawl').toggleClass('d-none');
+    $(this).find('.crawl').toggleClass('d-none');
+  });
 });
