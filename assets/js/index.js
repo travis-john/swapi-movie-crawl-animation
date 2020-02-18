@@ -19,28 +19,6 @@ for ( let i = 0; i < $starCount; i++){
   });
 }
 
-function generateStars() {
-
-  let $parent = $('.crawl'),
-      $parentHeight = $parent.height(),
-      $parentWidth = $parent.width();
-
-  for ( let i = 0; i < $starCount; i++){
-
-    let $randPosX = Math.floor((Math.random()*$parentWidth)),
-        $randPosY = Math.floor((Math.random()*$parentHeight));
-        $parent.append('<div class="crawl-star star--position-'+i+'"></div>');
-
-     $('.star--position-'+i).each(function(){
-       $(this).css({
-       left: $randPosX,
-       top: $randPosY
-      });
-    });
-  }
-
-}
-
 $.ajax({
   url: $query,
   method: 'GET'
@@ -72,7 +50,6 @@ $.ajax({
   }
 
   $('.film').on('click', function() {
-    // generateStars();
     $(this).find('.crawl').toggleClass('d-none');
     $($body).toggleClass('no-scroll');
     if ($body.hasClass('no-scroll')) {

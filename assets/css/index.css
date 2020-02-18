@@ -67,7 +67,8 @@ h1 {
   left: 0;
   right: 0;
   min-height: 100vh;
-  background: rgba(0,0,0,1);
+  min-width: 100vw;
+  background: #000000;
   z-index: 20;
   padding: 10px;
   color: #e5b13a;
