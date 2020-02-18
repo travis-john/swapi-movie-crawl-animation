@@ -1,22 +1,23 @@
 let $body = $('body'),
-    $starCount = 250,
     $bodyHeight = $body.height(),
     $bodyWidth = $body.width(),
     $query = 'https://swapi.co/api/films',
     $audio = $('audio');
 
-for ( let i = 0; i < $starCount; i++){
+function generateStars($starCount) {
+  for ( let i = 0; i < $starCount; i++){
 
-  let $randPosX = Math.floor((Math.random()*$bodyWidth)),
-      $randPosY = Math.floor((Math.random()*$bodyHeight));
-      $body.append('<div class="star star--position-'+i+'"></div>');
+    let $randPosX = Math.floor((Math.random()*$bodyWidth)),
+        $randPosY = Math.floor((Math.random()*$bodyHeight));
+        $body.append('<div class="star star--position-'+i+'"></div>');
 
-   $('.star--position-'+i).each(function(){
-     $(this).css({
-     left: $randPosX,
-     top: $randPosY
+     $('.star--position-'+i).each(function(){
+       $(this).css({
+       left: $randPosX,
+       top: $randPosY
+      });
     });
-  });
+  }
 }
 
 $.ajax({
@@ -49,6 +50,8 @@ $.ajax({
       `);
   }
 
+  generateStars(250);
+
   $('.film').on('click', function() {
     $(this).find('.crawl').toggleClass('d-none');
     $($body).toggleClass('no-scroll');
@@ -66,11 +69,13 @@ $.ajax({
     console.log(navigator.userAgent);
     if($isIOS){
       $('.film').addClass('active');
-      $($body).addClass('mobile-height');
+      // $($body).addClass('mobile-height');
+      generateStars(150);
     }
     if($isAndroid){
       $('.film').addClass('active');
-      $($body).addClass('mobile-height');
+      // $($body).addClass('mobile-height');
+      generateStars(150);
     }
   }
 
