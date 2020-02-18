@@ -54,11 +54,6 @@ h1 {
   border: 2px solid #e5b13a;
 }
 
-.active {
-  border: 2px solid #e5b13a;
-  background-color: rgba(0, 0, 0, .75);
-}
-
 .film-title {
   font-size: 2rem;
 }
@@ -185,7 +180,6 @@ section {
 	0% {
     top: 100%;
     opacity: 1;
-    /* display: block !important; */
   }
   95% {
     opacity: 1;
@@ -193,6 +187,16 @@ section {
 	100% {
     top: -200%;
     opacity: 0;
-    /* display: none !important */
   }
+}
+
+/* MOBILE STYLING */
+
+.active {
+  border: 2px solid #e5b13a;
+  background-color: rgba(0, 0, 0, .75);
+}
+
+.mobile-height {
+  height: 100% !important;
 }

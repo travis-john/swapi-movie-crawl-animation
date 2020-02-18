@@ -66,9 +66,11 @@ $.ajax({
     console.log(navigator.userAgent);
     if($isIOS){
       $('.film').addClass('active');
+      $($body).addClass('mobile-height');
     }
     if($isAndroid){
       $('.film').addClass('active');
+      $($body).addClass('mobile-height');
     }
   }
 
