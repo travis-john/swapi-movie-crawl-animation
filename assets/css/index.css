@@ -64,7 +64,7 @@ h1 {
   right: 0;
   min-height: 100vh;
   background: rgba(0,0,0,1);
-  z-index: 1000;
+  z-index: 20;
   padding: 10px;
   color: #e5b13a;
   display: flex;
@@ -80,9 +80,11 @@ section {
   /* left: 50%; */
 }
 
-
-.crawl-text {
-  opacity: 0
+.crawl-section {
+  transform: perspective(300px);
+  transform-origin: 50% 100%;
+  animation: titles 75s linear 1s;
+  opacity: 0;
 }
 
 .intro {
@@ -96,10 +98,38 @@ section {
 }
 
 .logo {
-    opacity: 0;
-    animation: logo 9s ease-out 9s;
-    width: inherit;
-  }
+  opacity: 0;
+  animation: logo 9s ease-out 9s;
+  width: inherit;
+}
+
+.crawl-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60rem;
+  z-index: 35;
+  top: auto;
+  left: inherit;
+  bottom: 0;
+  height: 50em;
+  font-size: 350%;
+  text-align: justify;
+	overflow: hidden;
+  transform-origin: 50% 100%;
+  transform: rotateX(25deg);
+}
+
+.crawl-text > h2 {
+  font-size: 150%;
+}
+
+.crawl-text > p {
+  margin: 1.35em 0 1.85em 0;
+  line-height: 1.35em;
+  backface-visibility: hidden;
+}
 
 .crawl-star {
   width: .25rem;
@@ -149,14 +179,13 @@ section {
 
 @keyframes titles {
 	0% {
-    top: 100%;
     opacity: 1;
   }
   95% {
     opacity: 1;
   }
 	100% {
-    top: 20%;
+    top: -200%;
     opacity: 0;
   }
 }
