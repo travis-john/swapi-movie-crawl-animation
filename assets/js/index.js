@@ -59,17 +59,18 @@ $.ajax({
       $audio.get(0).currentTime = 0;
     }
   });
+
+  function detectMobile(){
+    var $isIOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    var $isAndroid = navigator.userAgent.match(/android/i);
+    console.log(navigator.userAgent);
+    if($isIOS){
+      $('.film').addClass('active');
+    }
+    if($isAndroid){
+      $('.film').addClass('active');
+    }
+  }
+
+  detectMobile();
 });
-
-function detectMobile(){
-  var $isIOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  var $isAndroid = navigator.userAgent.match(/android/i);
-  if($isIOS){
-    $('.film').addClass('active');
-  }
-  if($isAndroid){
-    $('.film').addClass('active');
-  }
-}
-
-detectMobile();

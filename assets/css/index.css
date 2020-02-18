@@ -49,12 +49,13 @@ h1 {
 }
 
 .film:hover,
-.film:focus {
-  box-shadow: 0 0 0 .125rem #e5b13a inset;
+.film:focus,
+.active {
+  border: 2px solid #e5b13a;
 }
 
 .active {
-  box-shadow: 0 0 0 .125rem #e5b13a inset;
+  border: 2px solid #e5b13a;
 }
 
 .film-title {
