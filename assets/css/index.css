@@ -71,20 +71,11 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
 }
 
 section {
   position: absolute;
   top: 45%;
-  /* left: 50%; */
-}
-
-.crawl-section {
-  transform: perspective(300px);
-  transform-origin: 50% 100%;
-  animation: titles 75s linear 1s;
-  opacity: 0;
 }
 
 .intro {
@@ -103,9 +94,15 @@ section {
   width: inherit;
 }
 
+.crawl-section {
+  transform: perspective(300px);
+  transform-origin: 50% 100%;
+  animation: titles 75s linear 8s;
+  opacity: 0;
+}
+
 .crawl-text {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 60rem;
@@ -179,7 +176,9 @@ section {
 
 @keyframes titles {
 	0% {
+    top: 100%;
     opacity: 1;
+    /* display: block !important; */
   }
   95% {
     opacity: 1;
@@ -187,5 +186,6 @@ section {
 	100% {
     top: -200%;
     opacity: 0;
+    /* display: none !important */
   }
 }

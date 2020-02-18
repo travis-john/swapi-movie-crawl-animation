@@ -59,7 +59,7 @@ $.ajax({
               <section>
                 <img class='logo' src='assets/images/logo.svg'>
               </section>
-              <section class='crawl-section'>
+              <section class='crawl-section no-scroll'>
                 <div class='crawl-text'>
                   <h2 class='crawl-title'>${films[i].title}</h2>
                   <p>${films[i].opening_crawl}</p>
