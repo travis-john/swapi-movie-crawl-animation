@@ -97,7 +97,7 @@ section {
 }
 
 .crawl-section {
-  animation: titles 15s linear;
+  animation: titles 100s linear ;
   opacity: 0;
 }
 
@@ -105,16 +105,16 @@ section {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 60rem;
+  width: 80rem;
   z-index: 35;
   top: auto;
   left: inherit;
   bottom: 0;
-  height: 50em;
-  font-size: 350%;
+  /* height: 50em; */
+  font-size: 400%;
   text-align: justify;
 	overflow: hidden;
-  transform: perspective(700px) rotateX(25deg);
+  transform: perspective(700px) rotateX(10deg);
   transform-origin: 50% 100%;
 }
 
@@ -124,7 +124,7 @@ section {
 
 .crawl-text > p {
   margin: 1.35em 0 1.85em 0;
-  line-height: 1.35em;
+  line-height: 2.5em;
   backface-visibility: hidden;
 }
 
