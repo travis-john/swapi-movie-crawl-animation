@@ -56,6 +56,7 @@ h1 {
 
 .active {
   border: 2px solid #e5b13a;
+  background-color: rgba(0, 0, 0, .75);
 }
 
 .film-title {
