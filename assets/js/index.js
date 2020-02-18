@@ -38,7 +38,7 @@ $.ajax({
               <section>
                 <img class='logo' src='assets/images/logo.svg'>
               </section>
-              <section class='crawl-section no-scroll'>
+              <section class='crawl-section'>
                 <div class='crawl-text'>
                   <h2 class='crawl-title'>${films[i].title}</h2>
                   <p>${films[i].opening_crawl}</p>
@@ -72,12 +72,10 @@ $.ajax({
     if($isIOS){
       console.log(navigator.userAgent);
       $('.film').addClass('active');
-      // $($body).addClass('mobile-height');
     }
     if($isAndroid){
       console.log(navigator.userAgent);
       $('.film').addClass('active');
-      // $($body).addClass('mobile-height');
     }
   }
 

@@ -97,9 +97,7 @@ section {
 }
 
 .crawl-section {
-  transform: perspective(300px);
-  transform-origin: 50% 100%;
-  animation: titles 75s linear 8s;
+  animation: titles 15s linear;
   opacity: 0;
 }
 
@@ -116,8 +114,8 @@ section {
   font-size: 350%;
   text-align: justify;
 	overflow: hidden;
+  transform: perspective(700px) rotateX(25deg);
   transform-origin: 50% 100%;
-  transform: rotateX(25deg);
 }
 
 .crawl-text > h2 {
@@ -185,7 +183,7 @@ section {
     opacity: 1;
   }
 	100% {
-    top: -200%;
+    top: -500%;
     opacity: 0;
   }
 }
