@@ -53,19 +53,28 @@ $.ajax({
           <div class ='film'>
             <h2 class='film-title'>${films[i].title}</h2>
             <div class='crawl d-none'>
-              <p class='crawl-text crawl-text--intro'>A long time ago, in a galaxy far, far away...</p>
-              <img class='logo' src='assets/images/logo.svg'>
-              <h2 class='crawl-title'>${films[i].title}</h2>
-              <p class='crawl-text'>${films[i].opening_crawl}</p>
+              <section>
+                <p class='intro'>A long time ago, in a galaxy far, far away...</p>
+              </section>
+              <section>
+                <img class='logo' src='assets/images/logo.svg'>
+              </section>
+              <section>
+                <div class='crawl-text'>
+                  <div>
+                    <h2 class='crawl-title'>${films[i].title}</h2>
+                    <p>${films[i].opening_crawl}</p>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
       `);
   }
+
   $('.film').on('click', function() {
-
     // generateStars();
-
     $(this).find('.crawl').toggleClass('d-none');
     $($body).toggleClass('no-scroll');
     if ($body.hasClass('no-scroll')) {

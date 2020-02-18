@@ -42,7 +42,6 @@ h1 {
   margin-bottom: 1.25rem;
   cursor: pointer;
   color: #e5b13a;
-  font-family: swtitle, Arial;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,19 +74,32 @@ h1 {
   overflow-y: auto;
 }
 
-.crawl-title,
+section {
+  position: absolute;
+  top: 45%;
+  /* left: 50%; */
+}
+
+
 .crawl-text {
-  max-width: 300px;
-  text-align: justify;
+  opacity: 0
 }
 
-.crawl-text--intro {
+.intro {
+  width: 25rem;
   color: #4bd5ee;
+  font-size: 200%;
+	font-weight: 400;
+  text-align: justify;
+  opacity: 0;
+	animation: intro 6s ease-out 1s;
 }
 
-.crawl-title {
-  font-family: swtitle, Arial;
-}
+.logo {
+    opacity: 0;
+    animation: logo 9s ease-out 9s;
+    width: inherit;
+  }
 
 .crawl-star {
   width: .25rem;
@@ -99,10 +111,52 @@ h1 {
   z-index: 1;
 }
 
-.crawl-text {
-  font-family: swbody, Arial;
-}
-
 .no-scroll {
   overflow-y: hidden;
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+	20% {
+    opacity: 1;
+  }
+	90% {
+    opacity: 1;
+  }
+	100% {
+    opacity: 0;
+  }
+}
+
+@keyframes logo {
+	0% {
+  	width: 18rem;
+    transform: scale(2.75);
+    opacity: 1;
+  }
+	50% {
+    opacity: 1;
+    width: 18rem;;
+  }
+	100% {
+    transform: scale(.1);
+    opacity: 0;
+  	width: 18rem;;
+  }
+}
+
+@keyframes titles {
+	0% {
+    top: 100%;
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+	100% {
+    top: 20%;
+    opacity: 0;
+  }
 }
