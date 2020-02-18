@@ -67,15 +67,16 @@ $.ajax({
     var $isIOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
     var $isAndroid = navigator.userAgent.match(/android/i);
     console.log(navigator.userAgent);
+    if ($isIOS || $isAndroid) {
+      generateStars(150);
+    }
     if($isIOS){
       $('.film').addClass('active');
       // $($body).addClass('mobile-height');
-      generateStars(150);
     }
     if($isAndroid){
       $('.film').addClass('active');
       // $($body).addClass('mobile-height');
-      generateStars(150);
     }
   }
 
