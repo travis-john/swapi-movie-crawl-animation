@@ -53,6 +53,10 @@ h1 {
   box-shadow: 0 0 0 .125rem #e5b13a inset;
 }
 
+.active {
+  box-shadow: 0 0 0 .125rem #e5b13a inset;
+}
+
 .film-title {
   font-size: 2rem;
 }

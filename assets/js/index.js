@@ -83,3 +83,16 @@ $.ajax({
     }
   });
 });
+
+function detectMobile(){
+  var $isIOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  var $isAndroid = navigator.userAgent.match(/android/i);
+  if($isIOS){
+    $('.film').addClass('active');
+  }
+  if($isAndroid){
+    $('.film').addClass('active');
+  }
+}
+
+detectMobile();
