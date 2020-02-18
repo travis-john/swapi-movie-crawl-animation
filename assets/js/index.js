@@ -66,15 +66,16 @@ $.ajax({
   function detectMobile(){
     var $isIOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
     var $isAndroid = navigator.userAgent.match(/android/i);
-    console.log(navigator.userAgent);
     if ($isIOS || $isAndroid) {
       generateStars(150);
     }
     if($isIOS){
+      console.log(navigator.userAgent);
       $('.film').addClass('active');
       // $($body).addClass('mobile-height');
     }
     if($isAndroid){
+      console.log(navigator.userAgent);
       $('.film').addClass('active');
       // $($body).addClass('mobile-height');
     }
