@@ -1,7 +1,7 @@
 let $body = $('body'),
     $bodyHeight = $body.height(),
     $bodyWidth = $body.width(),
-    $query = 'https://swapi.co/api/films',
+    $query = 'https://swapi.dev/api/films',
     $audio = $('audio');
 
 function generateStars($starCount) {
